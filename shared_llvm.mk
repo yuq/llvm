@@ -161,6 +161,7 @@ LOCAL_WHOLE_STATIC_LIBRARIES += \
   $(llvm_post_static_libraries)
 
 include $(LLVM50_DEVICE_BUILD_MK)
-include $(BUILD_SHARED_LIBRARY)
+#include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 
 endif
