@@ -8,6 +8,7 @@ endif
 
 GENFILE := $(addprefix $(call local-generated-sources-dir)/llvm/IR/,Intrinsics.gen)
 LOCAL_GENERATED_SOURCES += $(GENFILE)
+LOCAL_ADDITIONAL_DEPENDENCIES += $(GENFILE)
 $(GENFILE): TBLGEN_LOCAL_MODULE := $(LOCAL_MODULE)
 $(GENFILE): $(INTRINSICTD50) $(INTRINSICTD50S) | $(LLVM50_TBLGEN)
 ifeq ($(LOCAL_IS_HOST_MODULE),true)
